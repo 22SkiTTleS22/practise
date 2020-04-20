@@ -11,21 +11,25 @@ public class Main {
         System.out.print("Input string: ");
         String str = in.nextLine();
         char[] strArray = str.toCharArray();
-        int maxLength = 0;
-        ArrayList<Character> mas = new ArrayList<Character>();
-        for (int j = 0; j < str.length(); j++) {
-            for (int i = j; i < str.length(); i++) {
-                if (mas.contains(strArray[i])) {
-                    if (maxLength < mas.size()) {
-                        maxLength = mas.size();
+        if (str.equals("")) {
+            System.out.println(0);
+        } else {
+            int maxLength = 1;
+            ArrayList<Character> mas = new ArrayList<Character>();
+            for (int j = 0; j < str.length(); j++) {
+                for (int i = j; i < str.length(); i++) {
+                    if (mas.contains(strArray[i])) {
+                        if (maxLength < mas.size()) {
+                            maxLength = mas.size();
+                            mas.add(strArray[i]);
+                        }
+                        mas.clear();
+                    } else {
                         mas.add(strArray[i]);
                     }
-                    mas.clear();
-                } else {
-                    mas.add(strArray[i]);
                 }
             }
+            System.out.println(maxLength);
         }
-        System.out.println(maxLength);
     }
 }
