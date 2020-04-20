@@ -14,7 +14,7 @@ public class Main {
         int maxLength = 1;
         ArrayList<Character> mas = new ArrayList<Character>();
         mas.add(strArray[0]);
-        for (int j = 1; j < str.length()-1; j++) {
+        for (int j = 1; j <= str.length()-1; j++) {
             for (int i = j; i < str.length(); i++) {
                 if (mas.contains(strArray[i])) {
                     if (maxLength < mas.size()) {
