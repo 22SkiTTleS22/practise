@@ -11,7 +11,7 @@ public class Main {
         System.out.print("Input string: ");
         String str = in.nextLine();
         char[] strArray = str.toCharArray();
-        int maxLength = 1;
+        int maxLength = 0;
         ArrayList<Character> mas = new ArrayList<Character>();
         for (int j = 0; j < str.length(); j++) {
             for (int i = j; i < str.length(); i++) {
