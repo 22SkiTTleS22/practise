@@ -24,6 +24,7 @@ public class Main {
                     }
                 } else {
                     mas.add(strArray[i]);
+                    maxLength = mas.size();
                 }
             }
         }
